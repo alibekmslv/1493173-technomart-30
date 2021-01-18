@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
-* Студент: [Алибек Масалимов](https://up.htmlacademy.ru/htmlcss/30/user/1493173).
-* Наставник: `Неизвестно`.
+- Студент: [Алибек Масалимов](https://up.htmlacademy.ru/htmlcss/30/user/1493173).
+- Наставник: [Анна Рус](https://htmlacademy.ru/profile/vanillawulf).
 
 ---
 
