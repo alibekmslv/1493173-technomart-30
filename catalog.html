@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML Academy: Техномарт</title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <a href="index.html">
+          <img
+            src="https://via.placeholder.com/220x47"
+            alt="Логотип интернет-магазина «Техномарт»"
+          />
+        </a>
+        <form action="#" method="POST">
+          <input type="search" placeholder="Поиск:" />
+        </form>
+        <a href="#">Закладки</a>
+        <a href="#">Корзина</a>
+        <a href="#">Оформить заказ</a>
+      </section>
+      <section>
+        <h1>
+          <i
+            >Интернет-магазин строительных материалов и инструментов для
+            ремонта</i
+          >
+        </h1>
+        <a href="tel:+78125550505">+7 (812) 555-05-55</a>
+        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <div>
+          <a href="#">Равшан Джамшутович</a>
+          <div>
+            <a href="#">Мои заказы</a>
+            <a href="#">Личный кабинет</a>
+          </div>
+        </div>
+      </section>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Главная</a>
+          </li>
+          <li>
+            <a href="#">Компания</a>
+          </li>
+          <li>
+            <a href="catalog.html">Каталог</a>
+          </li>
+          <li>
+            <a href="#">Новости</a>
+          </li>
+          <li>
+            <a href="#">Спецпредложения</a>
+          </li>
+          <li>
+            <a href="#">Доставка</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <ul>
+        <li>
+          <a href="#">Главная</a>
+        </li>
+        <li>
+          <a href="#">Каталог</a>
+        </li>
+        <li>
+          <a href="#">Инструмент</a>
+        </li>
+        <li>
+          <a href="#">Перфораторы</a>
+        </li>
+      </ul>
+      <h2>Перфораторы</h2>
+      <section>
+        <h3>Фильтр:</h3>
+        <form action="#" id="filters-form" method="GET">
+          <fieldset>
+            <legend><b>Цена:</b></legend>
+            <div>
+              <label for="range-min">От</label>
+              <input
+                id="range-min"
+                type="range"
+                min="0"
+                step="1"
+                max="40000"
+                value="0"
+              />
+              <label for="range-max">До</label>
+              <input
+                id="range-max"
+                type="range"
+                min="1"
+                step="1"
+                max="40000"
+                value="30000"
+              />
+            </div>
+            <label for="number-min">От</label>
+            <input type="number" id="number-min" min="0" max="40000" />
+            <label for="number-max">До</label>
+            <input type="number" id="number-max" min="1" max="40000" />
+          </fieldset>
+          <fieldset>
+            <legend><b>Производители:</b></legend>
+
+            <input
+              type="checkbox"
+              name="manufacturer"
+              id="manufacturer-1"
+              checked
+              value="Bosch"
+            />
+            <label for="manufacturer-1"> Bosch</label>
+
+            <input
+              type="checkbox"
+              name="manufacturer"
+              id="manufacturer-2"
+              value="Интерскол"
+            />
+            <label for="manufacturer-2">Интерскол</label>
+
+            <input
+              type="checkbox"
+              name="manufacturer"
+              id="manufacturer-3"
+              checked
+              value="Makita"
+            />
+            <label for="manufacturer-3">Makita</label>
+
+            <input
+              type="checkbox"
+              name="manufacturer"
+              id="manufacturer-4"
+              value="Dewalt"
+            />
+            <label for="manufacturer-4">Dewalt</label>
+
+            <input
+              type="checkbox"
+              name="manufacturer"
+              id="manufacturer-5"
+              value="Hitachi"
+            />
+            <label for="manufacturer-5">Hitachi</label>
+          </fieldset>
+          <fieldset>
+            <legend><b>Питание:</b></legend>
+            <input
+              type="radio"
+              name="power-supply"
+              id="power-supply-1"
+              checked
+            />
+            <label for="power-supply-1">Аккумуляторные</label>
+            <input type="radio" name="power-supply" id="power-supply-2" />
+            <label for="power-supply-1">Сетевые</label>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
