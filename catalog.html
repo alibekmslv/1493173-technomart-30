@@ -85,29 +85,45 @@
           <fieldset>
             <legend><b>Цена:</b></legend>
             <div>
-              <label for="range-min">От</label>
+              <label for="price-min">От</label>
               <input
-                id="range-min"
+                id="price-min"
+                name="price-min"
                 type="range"
                 min="0"
+                max="40000"
                 step="1"
+                value="0"
+              />
+              <label for="price-max">До</label>
+              <input
+                id="price-max"
+                name="price-max"
+                type="range"
+                min="1"
+                max="40000"
+                step="1"
+                value="30000"
+              />
+            </div>
+            <div>
+              <label for="price-number-min">От</label>
+              <input
+                type="number"
+                id="price-number-min"
+                min="0"
                 max="40000"
                 value="0"
               />
-              <label for="range-max">До</label>
+              <label for="price-number-max">До</label>
               <input
-                id="range-max"
-                type="range"
+                type="number"
+                id="price-number-max"
                 min="1"
-                step="1"
                 max="40000"
                 value="30000"
               />
             </div>
-            <label for="number-min">От</label>
-            <input type="number" id="number-min" min="0" max="40000" />
-            <label for="number-max">До</label>
-            <input type="number" id="number-max" min="1" max="40000" />
           </fieldset>
           <fieldset>
             <legend><b>Производители:</b></legend>
@@ -160,13 +176,62 @@
               type="radio"
               name="power-supply"
               id="power-supply-1"
+              value="Аккумуляторные"
               checked
             />
             <label for="power-supply-1">Аккумуляторные</label>
-            <input type="radio" name="power-supply" id="power-supply-2" />
+            <input
+              type="radio"
+              name="power-supply"
+              id="power-supply-2"
+              value="Сетевые"
+            />
             <label for="power-supply-1">Сетевые</label>
           </fieldset>
           <button type="submit">Показать</button>
+        </form>
+      </section>
+      <section>
+        <h3>Сортировка:</h3>
+        <form action="#" method="GET">
+          <fieldset>
+            <legend class="visually-hidden">Основная сортировка</legend>
+            <input
+              type="radio"
+              name="sort"
+              id="by-price"
+              value="by-price"
+              checked
+            />
+            <label for="by-price">По цене</label>
+            <input type="radio" name="sort" id="by-type" value="by-type" />
+            <label for="by-type">По типу</label>
+            <input
+              type="radio"
+              name="sort"
+              id="by-function"
+              value="by-function"
+            />
+            <label for="by-function">По функционалу</label>
+          </fieldset>
+          <fieldset>
+            <legend class="visually-hidden">Направление сортировки</legend>
+            <input
+              type="radio"
+              name="sort-direction"
+              value="asc"
+              id="sort-asc"
+              checked
+            />
+            <label for="sort-asc" class="visually-hidden">По возрастанию</label>
+            <input
+              type="radio"
+              name="sort-direction"
+              value="desc"
+              id="sort-desc"
+            />
+            <label for="sort-desc" class="visually-hidden">По убыванию</label>
+          </fieldset>
         </form>
       </section>
     </main>
