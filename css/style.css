@@ -290,7 +290,6 @@ button.button {
 /* Popular Products */
 .popular-products ul {
   font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: 700;
   list-style-type: none;
 }
 
@@ -303,6 +302,7 @@ button.button {
 .product-item h3 {
   font-size: 1.125rem;
   line-height: 1.1111;
+  font-weight: 700;
 }
 
 .product-item p {
