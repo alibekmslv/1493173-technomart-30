@@ -192,35 +192,47 @@ button.button {
 .header-top-wrapper {
   width: 940px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
 }
 
 .header-top-links {
-  justify-self: end;
+  display: flex;
 }
 
-.header-top a {
+.header-top-links a {
   font-size: 1.125rem;
   color: var(--white);
-  line-height: 1.3333;
+  line-height: 24px;
+  display: block;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+  width: 150px;
 }
 
-.header-top a:active {
+.header-top-links a:active {
   background-color: var(--special-dark);
+  color: ;
 }
 
 .header-top .main-header-logo {
   font-size: inherit;
   background-color: var(--basic-red);
+  padding: 0.5em 3.5em;
+}
+
+.header-top form {
+  display: block;
 }
 
 .header-top input {
   font-size: 1.125rem;
   background-color: var(--basic-blue);
   color: var(--white);
-  line-height: 1.3333;
+  line-height: 24px;
   border: none;
+  width: 271px;
+  height: 100%;
 }
 
 .header-top input:focus {
@@ -234,8 +246,6 @@ button.button {
 
 .header-top .place-order-link {
   background-color: var(--basic-green);
-  padding-left: 1.056em;
-  padding-right: 0.889em;
 }
 
 .header-bottom-wrapper {
@@ -309,7 +319,7 @@ button.button {
 .main-navigation ul {
   list-style-type: none;
   font-size: 1.125rem;
-  line-height: 1.3333;
+  line-height: 24px;
 }
 
 .main-navigation a {
@@ -328,7 +338,19 @@ button.button {
 .site-navigation {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+
+.site-navigation a {
+  display: block;
+  padding-top: 0.889em;
+  padding-bottom: 0.889em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
 /* Features */
 .features {
   margin-bottom: 59px;
@@ -709,6 +731,10 @@ button.button {
 
 .main-footer-logo {
   background-color: var(--basic-red);
+  width: 220px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .main-footer ul {
@@ -720,14 +746,28 @@ button.button {
   line-height: 1.3333;
   display: grid;
   grid-template-columns: auto 1fr;
+  margin-bottom: 54px;
 }
 
 .top-footer a {
   color: var(--white);
 }
+.top-footer p {
+  margin-top: 22px;
+  margin-bottom: 0;
+}
+.footer-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
 .footer-list a {
   color: var(--white);
+  display: block;
+  margin-left: 58px;
 }
 .footer-list a:hover {
   text-decoration: underline;
@@ -753,6 +793,7 @@ button.button {
   font-size: 1em;
   line-height: 1.125;
   background-color: var(--special-blue-dark);
+  display: flex;
 }
 
 .bottom-footer-wrapper {
