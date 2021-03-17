@@ -200,12 +200,23 @@ button.button {
 }
 
 /* Search Field */
-.header-top form {
+.search-field {
   display: block;
   position: relative;
 }
 
-.header-top input {
+.search-field svg {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  opacity: 0.3;
+}
+
+.search-field:hover svg {
+  opacity: 1;
+}
+
+.search-field input {
   font-size: 1.125rem;
   background-color: var(--special-blue-dark);
   color: var(--white);
@@ -216,27 +227,20 @@ button.button {
   padding-left: 42px;
 }
 
-.header-top form::before {
-  content: "";
-  position: absolute;
-  background-image: url("../img/icon-search.svg");
-  width: 17px;
-  height: 17px;
-  top: 12px;
-  left: 17px;
-  opacity: 0.3;
-}
-
-.header-top form:hover::before {
-  opacity: 1;
-}
-
-.header-top input:focus {
+.search-field input:focus {
   background-color: var(--white);
   color: var(--black);
 }
 
-.header-top input::placeholder {
+.search-field input:focus + svg {
+  opacity: 1;
+}
+
+.search-field input:focus + svg path {
+  fill: var(--basic-red);
+}
+
+.search-field input::placeholder {
   color: var(--white);
 }
 
