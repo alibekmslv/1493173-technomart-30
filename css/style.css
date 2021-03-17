@@ -57,6 +57,7 @@
   --basic-background: #f1f5f7;
   --basic-borderline: #e5e5e5;
   --basic-biege: #f9f5f0;
+  --basic-grey: #3d546f;
   --white: #ffffff;
   --black: #000000;
   --dark-blue: #212a3a;
@@ -294,6 +295,10 @@ button.button {
   opacity: 0.3;
 }
 
+.cart-link.cart-link--added {
+  background-color: var(--basic-red);
+}
+
 /* Place Order Link */
 .header-top-links .place-order-link {
   background-color: var(--basic-green);
@@ -358,12 +363,18 @@ button.button {
   margin: 3px 0 0 10px;
 }
 
-.user-links {
+/* User Authentication Box */
+.user-auth {
   margin-top: 46px;
   justify-self: end;
 }
 
-.user-links a {
+.user-auth-guest {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-auth-basic-button {
   display: inline-block;
   background-color: var(--white);
   font-size: 21px;
@@ -373,62 +384,118 @@ button.button {
   padding-bottom: 12px;
 }
 
-.user-links a:hover {
+.user-auth-basic-button:hover {
   color: var(--basic-red);
 }
 
-.user-links a:active {
+.user-auth-basic-button:active {
   color: var(--basic-greylight);
 }
 
-.user-links .signin-link {
+.user-auth-sign-in {
+  display: flex;
+  align-items: center;
+  padding-left: 19px;
   padding-right: 27px;
-  padding-left: 45px;
-  position: relative;
   margin-right: 10px;
 }
 
-.user-links .signin-link::before {
-  content: "";
-  position: absolute;
-  background-image: url("../img/icon-login.svg");
-  width: 21px;
-  height: 17px;
-  top: 14px;
-  left: 19px;
+.user-auth-sign-in span {
+  margin-left: 6px;
 }
 
-.user-links .signup-link {
+.user-auth-sign-in:hover path {
+  fill: var(--basic-grey);
+}
+
+.user-auth-sign-in:active path {
+  fill: var(--basic-greylight);
+}
+
+.user-auth-sign-up {
   padding-left: 24px;
   padding-right: 24px;
 }
 
-.user-name {
-  background-color: var(--white);
-  font-size: 1.313rem;
-  color: var(--black);
-  line-height: 1;
+.user-auth-logged-in {
+  display: grid;
+  grid-template-columns: max-content auto;
+  padding-left: 15px;
+  padding-right: 17px;
 }
 
-.user-name:hover {
+.user-auth-username {
   color: var(--black);
+  display: flex;
+  align-items: center;
 }
 
-.user-name:active {
+.user-auth-username:hover path {
+  fill: var(--basic-grey);
+}
+
+.user-auth-username:active path {
+  fill: var(--basic-greylight);
+}
+
+.user-auth-username span {
+  margin-left: 21px;
+  max-width: 186px;
+}
+
+.user-auth-username:active span {
   color: var(--basic-greylight);
 }
 
-.user-links .user-link-sub {
+.user-auth-logout {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.user-auth-logout:hover path {
+  fill: var(--basic-grey);
+}
+
+.user-auth-logout:active path {
+  fill: var(--basic-greylight);
+}
+
+.user-auth-personal-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+.user-auth-personal-links a:not(:last-child) {
+  position: relative;
+  padding-right: 30px;
+}
+
+.user-auth-personal-links a:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  right: 12px;
+  top: 7px;
+  border-radius: 50%;
+  background-color: var(--basic-blue);
+}
+
+.user-auth-personal-links a {
   font-size: 1rem;
   line-height: 1.125;
   color: var(--basic-blue);
 }
 
-.user-links .user-link-sub:hover {
+.user-auth-personal-links a:hover {
   color: var(--basic-red);
 }
 
-.user-links .user-link-sub:active {
+.user-auth-personal-links a:active {
   color: var(--basic-greylight);
 }
 
