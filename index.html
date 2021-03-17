@@ -11,7 +11,7 @@
   <body class="page-body">
     <header class="main-header">
       <section class="header-top">
-        <div class="header-top-wrapper">
+        <div class="header-top-flex">
           <a href="index.html" class="main-header-logo">
             <img
               src="img/logo-technomart.svg"
@@ -24,18 +24,19 @@
             <form action="#" method="POST">
               <input type="search" placeholder="Поиск:" />
             </form>
-            <a href="#">Закладки</a>
-            <a href="#">Корзина</a>
+            <a class="bookmark-link basic-link" href="#">Закладки: 0</a>
+            <a class="cart-link basic-link" href="#">Корзина: 0</a>
             <a href="#" class="place-order-link">Оформить заказ</a>
           </div>
         </div>
       </section>
       <section class="header-bottom">
-        <div class="header-bottom-wrapper">
+        <div class="header-bottom-grid">
           <h1>
             <i
-              >Интернет-магазин строительных материалов и инструментов для
-              ремонта</i
+              >Интернет-магазин<br />
+              строительных материалов<br />
+              и инструментов для ремонта</i
             >
           </h1>
           <div class="header-bottom-contacts">
@@ -49,7 +50,7 @@
         </div>
       </section>
       <nav class="main-navigation">
-        <ul class="site-navigation">
+        <ul class="site-navigation-list">
           <li class="site-navigation-item">
             <a href="index.html">Главная</a>
           </li>
@@ -78,7 +79,7 @@
       <section class="features container">
         <h2 class="visually-hidden">Наши преимущества</h2>
         <ul class="features-list features-grid">
-          <li class="feature-item feature-item--yellow">
+          <li class="feature-item feature-item--yellow label-new">
             <h3>Материалы</h3>
             <a href="#" class="features-button">На любой вкус</a>
             <img
@@ -131,8 +132,10 @@
           <li class="feature-item-gallery">
             <div class="gallery">
               <div class="gallery-content">
-                <h3>Перфораторы</h3>
-                <p>Настоящие мужские игрушки</p>
+                <div class="gallery-content-text">
+                  <h3>Перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                </div>
                 <figure>
                   <img
                     src="img/construction-worker-1.jpg"
@@ -144,8 +147,10 @@
                 <a href="catalog.html" class="button">Открыть каталог</a>
               </div>
               <div class="gallery-content gallery-content--hidden">
-                <h3>Дрели</h3>
-                <p>Соседям на радость!</p>
+                <div class="gallery-content-text">
+                  <h3>Дрели</h3>
+                  <p>Соседям на радость!</p>
+                </div>
                 <figure>
                   <img
                     src="img/construction-worker-2.jpg"
@@ -197,7 +202,7 @@
               </div>
             </article>
           </li>
-          <li class="product-item">
+          <li class="product-item label-new">
             <article>
               <a href="#">
                 <h3>Перфоратор BOSCH BFG 3000</h3>
@@ -243,7 +248,7 @@
               </div>
             </article>
           </li>
-          <li class="product-item">
+          <li class="product-item label-new">
             <article>
               <a href="#">
                 <h3>Перфоратор BOSCH BFG 2000</h3>
@@ -358,7 +363,7 @@
       </section>
       <section class="services">
         <div class="services-wrapper container">
-          <div class="services-discription">
+          <div class="services-description">
             <h2>Сервисы</h2>
             <p>
               Хороший интернет-магазин отличается от плохого не только ценами!
@@ -500,9 +505,21 @@
         <div class="bottom-footer-wrapper container">
           <p>© 2010–2019 Компания «Техномарт»<br />Все права защищены</p>
           <ul class="socials-list">
-            <li class="social-item"><a href="#">ВКонтакте</a></li>
-            <li class="social-item"><a href="#">Facebook</a></li>
-            <li class="social-item"><a href="#">Instagram</a></li>
+            <li class="social-item social-item--vk">
+              <a href="#">
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
+            </li>
+            <li class="social-item social-item--facebook">
+              <a href="#">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li class="social-item social-item--instagram">
+              <a href="#">
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
           </ul>
           <dl class="bottom-footer-copyright">
             <div>
