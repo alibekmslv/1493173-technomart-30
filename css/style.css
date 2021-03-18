@@ -702,19 +702,55 @@ button.button {
   display: none;
 }
 
-.gallery-slide {
+.gallery-slide-controls {
   position: absolute;
   bottom: 38px;
   left: 50%;
   transform: translateX(-50%);
+  width: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.gallery-slide-controls button {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.gallery-nav {
+.gallery-slide-controls .current {
+  background-color: var(--basic-red);
+}
+
+.gallery-arrow-controls {
   position: absolute;
-  top: 50%;
+  top: 45%;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+.gallery-arrow-controls button {
+  width: 22px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icon-left.svg");
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.gallery-arrow-controls button:hover {
+  opacity: 1;
+}
+
+.gallery-arrow-controls .arrow-right {
+  transform: rotate(180deg);
 }
 
 /* Products List */
