@@ -131,17 +131,19 @@
     <main>
       <section class="site-breadcrumbs container">
         <h3 class="visually-hidden">Путь навигации по сайту</h3>
-        <ul>
-          <li>
-            <a href="#">Главная</a>
+        <ul class="site-breadcrumbs-list">
+          <li class="site-breadcrumbs-item site-breadcrumbs-item--icon-home">
+            <a href="index.html"
+              ><span class="visually-hidden">Главная</span></a
+            >
           </li>
-          <li>
-            <a href="#">Каталог</a>
+          <li class="site-breadcrumbs-item">
+            <a href="catalog.html">Каталог</a>
           </li>
-          <li>
+          <li class="site-breadcrumbs-item">
             <a href="#">Инструмент</a>
           </li>
-          <li>
+          <li class="site-breadcrumbs-item">
             <a href="#">Перфораторы</a>
           </li>
         </ul>
@@ -158,9 +160,50 @@
             method="GET"
             class="product-filter-form"
           >
-            <fieldset>
+            <fieldset class="product-filter-price">
               <legend><b>Цена:</b></legend>
-              <div class="product-filter-range">
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="width: 70%; margin-left: 9%"></div>
+                  </div>
+                  <div
+                    class="toggle toggle-min"
+                    tabindex="0"
+                    style="left: 9%"
+                  ></div>
+                  <div
+                    class="toggle toggle-max"
+                    tabindex="0"
+                    style="left: 70%"
+                  ></div>
+                </div>
+                <div class="price-controls">
+                  <label for="price-number-min" class="visually-hidden"
+                    >От</label
+                  >
+                  <input
+                    type="number"
+                    id="price-number-min"
+                    min="0"
+                    max="40000"
+                    value="0"
+                  />
+                  &mdash;
+                  <label for="price-number-max" class="visually-hidden"
+                    >До</label
+                  >
+                  <input
+                    type="number"
+                    id="price-number-max"
+                    min="1"
+                    max="40000"
+                    value="30000"
+                  />
+                </div>
+              </div>
+
+              <!-- <div class="product-filter-range">
                 <label for="price-min" class="visually-hidden">От</label>
                 <input
                   id="price-min"
@@ -201,83 +244,94 @@
                   max="40000"
                   value="30000"
                 />
-              </div>
+              </div> -->
             </fieldset>
-            <fieldset>
+            <fieldset class="product-filter-manufacturers">
               <legend><b>Производители:</b></legend>
-              <ul>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="manufacturer"
-                    id="manufacturer-1"
-                    checked
-                    value="Bosch"
-                  />
-                  <label for="manufacturer-1">Bosch</label>
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="manufacturer"
-                    id="manufacturer-2"
-                    value="Интерскол"
-                  />
-                  <label for="manufacturer-2">Интерскол</label>
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="manufacturer"
-                    id="manufacturer-3"
-                    checked
-                    value="Makita"
-                  />
-                  <label for="manufacturer-3">Makita</label>
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="manufacturer"
-                    id="manufacturer-4"
-                    value="Dewalt"
-                  />
-                  <label for="manufacturer-4">Dewalt</label>
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    name="manufacturer"
-                    id="manufacturer-5"
-                    value="Hitachi"
-                  />
-                  <label for="manufacturer-5">Hitachi</label>
-                </li>
-              </ul>
+              <label for="manufacturer-1" class="check">
+                <input
+                  type="checkbox"
+                  name="manufacturer"
+                  id="manufacturer-1"
+                  checked
+                  value="Bosch"
+                  class="check-input"
+                />
+                <span class="check-box"></span>
+                <span class="check-text">Bosch</span>
+              </label>
+              <label for="manufacturer-2" class="check">
+                <input
+                  type="checkbox"
+                  name="manufacturer"
+                  id="manufacturer-2"
+                  value="Интерскол"
+                  class="check-input"
+                />
+                <span class="check-box"></span>
+                <span class="check-text">Интерскол</span>
+              </label>
+              <label for="manufacturer-3" class="check"
+                ><input
+                  type="checkbox"
+                  name="manufacturer"
+                  id="manufacturer-3"
+                  checked
+                  value="Makita"
+                  class="check-input"
+                />
+                <span class="check-box"></span>
+                <span class="check-text">Makita</span>
+              </label>
+              <label for="manufacturer-4" class="check"
+                ><input
+                  type="checkbox"
+                  name="manufacturer"
+                  id="manufacturer-4"
+                  value="Dewalt"
+                  class="check-input"
+                />
+                <span class="check-box"></span>
+                <span class="check-text">Dewalt</span>
+              </label>
+              <label for="manufacturer-5" class="check"
+                ><input
+                  type="checkbox"
+                  name="manufacturer"
+                  id="manufacturer-5"
+                  value="Hitachi"
+                  class="check-input"
+                  disabled
+                />
+                <span class="check-box"></span>
+                <span class="check-text">Hitachi</span>
+              </label>
             </fieldset>
-            <fieldset>
+            <fieldset class="product-filter-power-supply">
               <legend><b>Питание:</b></legend>
-              <ul>
-                <li>
-                  <input
-                    type="radio"
-                    name="power-supply"
-                    id="power-supply-1"
-                    value="Аккумуляторные"
-                    checked
-                  />
-                  <label for="power-supply-1">Аккумуляторные</label>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    name="power-supply"
-                    id="power-supply-2"
-                    value="Сетевые"
-                  />
-                  <label for="power-supply-1">Сетевые</label>
-                </li>
-              </ul>
+              <label for="power-supply-1" class="check">
+                <input
+                  type="radio"
+                  name="power-supply"
+                  id="power-supply-1"
+                  value="Аккумуляторные"
+                  checked
+                  class="check-input"
+                />
+                <span class="check-box check-box--radio"></span>
+                <span class="check-text">Аккумуляторные</span>
+              </label>
+              <label for="power-supply-2" class="check">
+                <input
+                  type="radio"
+                  name="power-supply"
+                  id="power-supply-2"
+                  value="Сетевые"
+                  class="check-input"
+                />
+                <span class="check-box check-box--radio"></span>
+                <div class="check-text">Сетевые</div>
+              </label>
             </fieldset>
             <button type="submit">Показать</button>
           </form>
@@ -287,67 +341,69 @@
           <form action="#" method="GET" class="product-sort-form">
             <fieldset class="basic-sort">
               <legend class="visually-hidden">Основная сортировка</legend>
-              <ul>
-                <li>
-                  <input
-                    type="radio"
-                    name="sort"
-                    id="by-price"
-                    value="by-price"
-                    checked
-                    class="basic-sort-input"
-                  />
-                  <label for="by-price">По цене</label>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    name="sort"
-                    id="by-type"
-                    value="by-type"
-                    class="basic-sort-input"
-                  />
-                  <label for="by-type">По типу</label>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    name="sort"
-                    id="by-function"
-                    value="by-function"
-                    class="basic-sort-input"
-                  />
-                  <label for="by-function">По функционалу</label>
-                </li>
-              </ul>
+              <label for="by-price" class="sort-button sort-button--by-price"
+                ><input
+                  type="radio"
+                  name="sort"
+                  id="by-price"
+                  value="by-price"
+                  checked
+                  class="sort-button-input"
+                />
+                <span class="sort-button-text">По цене</span></label
+              >
+              <label for="by-type" class="sort-button sort-button--by-type"
+                ><input
+                  type="radio"
+                  name="sort"
+                  id="by-type"
+                  value="by-type"
+                  class="sort-button-input"
+                />
+                <span class="sort-button-text">По типу</span>
+              </label>
+              <label
+                for="by-function"
+                class="sort-button sort-button--by-function"
+                ><input
+                  type="radio"
+                  name="sort"
+                  id="by-function"
+                  value="by-function"
+                  class="sort-button-input"
+                />
+                <span class="sort-button-text">По функционалу</span>
+              </label>
             </fieldset>
             <fieldset class="sort-direction">
               <legend class="visually-hidden">Направление сортировки</legend>
-              <ul>
-                <li>
-                  <input
-                    type="radio"
-                    name="sort-direction"
-                    value="asc"
-                    id="sort-asc"
-                    checked
-                  />
-                  <label for="sort-asc" class="visually-hidden"
-                    >По возрастанию</label
-                  >
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    name="sort-direction"
-                    value="desc"
-                    id="sort-desc"
-                  />
-                  <label for="sort-desc" class="visually-hidden"
-                    >По убыванию</label
-                  >
-                </li>
-              </ul>
+              <label for="sort-asc" class="button-dir">
+                <input
+                  type="radio"
+                  name="sort-direction"
+                  value="asc"
+                  id="sort-asc"
+                  checked
+                  class="button-dir-input"
+                />
+                <span class="button-dir-box"></span>
+                <span class="button-dir-text visually-hidden"
+                  >По возрастанию</span
+                >
+              </label>
+              <label for="sort-desc" class="button-dir">
+                <input
+                  type="radio"
+                  name="sort-direction"
+                  value="desc"
+                  id="sort-desc"
+                  class="button-dir-input"
+                />
+                <span class="button-dir-box button-dir-box--down"></span>
+                <span class="button-dir-text visually-hidden"
+                  >По возрастанию</span
+                >
+              </label>
             </fieldset>
           </form>
         </section>
@@ -365,7 +421,7 @@
                     alt="Перфоратор BOSCH BFG 6000"
                   />
                 </a>
-                <p class="product-item-old-prict"><del>30500 Р</del></p>
+                <p class="product-item-old-price"><del>30500 Р</del></p>
                 <p class="product-item-price">25500 Р.</p>
                 <div class="product-item-action-buttons">
                   <button type="button" class="product-item-buy-button">
@@ -388,7 +444,7 @@
                     alt="Перфоратор BOSCH BFG 6000"
                   />
                 </a>
-                <p class="product-item-old-prict"><del>30500 Р</del></p>
+                <p class="product-item-old-price"><del>30500 Р</del></p>
                 <p class="product-item-price">25500 Р.</p>
                 <div class="product-item-action-buttons">
                   <button type="button" class="product-item-buy-button">
@@ -411,7 +467,7 @@
                     alt="Перфоратор BOSCH BFG 6000"
                   />
                 </a>
-                <p class="product-item-old-prict"><del>30500 Р</del></p>
+                <p class="product-item-old-price"><del>30500 Р</del></p>
                 <p class="product-item-price">25500 Р.</p>
                 <div class="product-item-action-buttons">
                   <button type="button" class="product-item-buy-button">
@@ -435,7 +491,7 @@
                   />
                 </a>
 
-                <p class="product-item-old-prict"><del>22500 Р</del></p>
+                <p class="product-item-old-price"><del>22500 Р</del></p>
                 <p class="product-item-price">15500 Р.</p>
                 <div class="product-item-action-buttons">
                   <button type="button" class="product-item-buy-button">
@@ -459,7 +515,7 @@
                   />
                 </a>
 
-                <p class="product-item-old-prict"><del>30500 Р</del></p>
+                <p class="product-item-old-price"><del>30500 Р</del></p>
                 <p class="product-item-price">25500 Р.</p>
                 <div class="product-item-action-buttons">
                   <button type="button" class="product-item-buy-button">
@@ -505,7 +561,7 @@
                     alt="Перфоратор BOSCH BFG 3000"
                   />
                 </a>
-                <p class="product-item-old-prict"><del>22500 Р</del></p>
+                <p class="product-item-old-price"><del>22500 Р</del></p>
                 <p class="product-item-price">15500 Р.</p>
                 <div class="product-item-action-buttons">
                   <button type="button" class="product-item-buy-button">
@@ -529,7 +585,7 @@
                   />
                 </a>
 
-                <p class="product-item-old-prict"><del>30500 Р</del></p>
+                <p class="product-item-old-price"><del>30500 Р</del></p>
                 <p class="product-item-price">25500 Р.</p>
                 <div class="product-item-action-buttons">
                   <button type="button" class="product-item-buy-button">
