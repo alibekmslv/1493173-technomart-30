@@ -784,6 +784,7 @@ button.button {
   background-color: var(--basic-red);
   border-radius: 3px;
   margin-bottom: 21px;
+  clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
 }
 
 .product-item-action-buttons {
