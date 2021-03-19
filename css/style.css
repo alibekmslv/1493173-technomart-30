@@ -123,19 +123,19 @@ a {
   cursor: pointer;
 }
 
-.button.button--white,
-.button.button--white:hover,
-.button.button--white:active {
-  background-color: var(--white);
-  color: var(--black);
-}
-
 .button:hover {
   background-color: var(--special-red);
 }
 
 .button:active {
   background-color: var(--error);
+}
+
+.button--white:hover,
+.button--white,
+.button--white:active {
+  background-color: var(--white);
+  color: var(--black);
 }
 
 .button-salmon {
@@ -226,7 +226,7 @@ button.button {
   opacity: 1;
 }
 
-.search-field input {
+.search-field-input {
   font-size: 1.125rem;
   background-color: var(--special-blue-dark);
   color: var(--white);
@@ -237,20 +237,20 @@ button.button {
   padding-left: 42px;
 }
 
-.search-field input:focus {
+.search-field-input:focus {
   background-color: var(--white);
   color: var(--black);
 }
 
-.search-field input:focus + svg {
+.search-field-input:focus + svg {
   opacity: 1;
 }
 
-.search-field input:focus + svg path {
+.search-field-input:focus + svg path {
   fill: var(--basic-red);
 }
 
-.search-field input::placeholder {
+.search-field-input::placeholder {
   color: var(--white);
   opacity: 1;
 }
