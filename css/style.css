@@ -252,6 +252,7 @@ button.button {
 
 .search-field input::placeholder {
   color: var(--white);
+  opacity: 1;
 }
 
 /* Header Basic Links */
