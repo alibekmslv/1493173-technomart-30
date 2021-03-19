@@ -1596,18 +1596,13 @@ button.button {
 
 .product-sort-form .basic-sort {
   margin-right: 46px;
+  display: flex;
+  justify-content: space-between;
+  min-width: 354px;
 }
 
 .sort-button {
   cursor: pointer;
-}
-
-.sort-button--by-function {
-  margin-left: 65px;
-}
-
-.sort-button--by-type {
-  margin-left: 70px;
 }
 
 .sort-button-input:checked + .sort-button-text {
