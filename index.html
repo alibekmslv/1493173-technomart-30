@@ -7,6 +7,7 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -489,7 +490,7 @@
             Мы можем доставить ваш товар в самые отдаленные точки России!<br />
             Техномарт работает со многими транспортными компаниями:
           </p>
-          <ul class="company-list">
+          <ul class="typography-list">
             <li class="company-item">Деловые линии</li>
             <li class="company-item">Автотрейдинг</li>
             <li class="company-item">ЖелДорЭкспедиция</li>
@@ -510,7 +511,7 @@
               alt="«Техномарт» на карте"
             />
           </a>
-          <button type="button" class="button">
+          <button type="button" class="button" id="modalFeedbackTrigger">
             Заблудились? Напишите нам!
           </button>
         </div>
@@ -584,5 +585,47 @@
         </div>
       </section>
     </footer>
+    <section class="modal" id="modalFeedback">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form action="#" method="POST" class="feedback-form" id="feedbackForm">
+        <div class="feedback-form-main">
+          <div class="feedback-sender-name">
+            <label for="feedback-sender-name">Ваше имя:</label>
+            <input
+              type="text"
+              id="feedback-sender-name"
+              placeholder="Имя Фамилия"
+            />
+          </div>
+          <div class="feedback-sender-email">
+            <label for="feedback-sender-email">Ваш e-mail:</label>
+            <input
+              type="email"
+              id="feedback-sender-email"
+              placeholder="email@example.com"
+            />
+          </div>
+          <div class="feedback-sender-text">
+            <label for="feedback-sender-text">Текст письма:</label>
+            <textarea
+              name=""
+              id="feedback-sender-text"
+              cols="30"
+              rows="10"
+              placeholder="В свободной форме"
+            ></textarea>
+          </div>
+        </div>
+        <div class="feedback-form-submit">
+          <button type="submit" class="button">Отправить</button>
+        </div>
+      </form>
+      <button
+        id="modalFeedbackClose"
+        class="modal-close"
+        type="button"
+        aria-label="Закрыть"
+      ></button>
+    </section>
   </body>
 </html>
