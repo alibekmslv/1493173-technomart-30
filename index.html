@@ -7,7 +7,6 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js" defer></script>
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -40,7 +39,9 @@
               </svg>
             </form>
             <a class="bookmark-link basic-link" href="#">Закладки: 0</a>
-            <a class="cart-link basic-link" href="#">Корзина: 0</a>
+            <a class="cart-link basic-link" href="#"
+              >Корзина:&nbsp;<span id="cartCounter">0</span></a
+            >
             <a href="#" class="place-order-link">Оформить заказ</a>
           </div>
         </div>
@@ -503,7 +504,7 @@
             Вы можете забрать товар сами,<br />
             заехав в наш офис:
           </p>
-          <a href="#" class="contacts-map">
+          <a href="#" class="contacts-map" id="modalMapTrigger">
             <img
               src="img/map.jpg"
               width="300"
@@ -585,7 +586,7 @@
         </div>
       </section>
     </footer>
-    <section class="modal" id="modalFeedback">
+    <section class="modal" id="modalFeedback" tabindex="0">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form action="#" method="POST" class="feedback-form" id="feedbackForm">
         <div class="feedback-form-main">
@@ -608,7 +609,7 @@
           <div class="feedback-sender-text">
             <label for="feedback-sender-text">Текст письма:</label>
             <textarea
-              name=""
+              name="feedback-sender-text"
               id="feedback-sender-text"
               cols="30"
               rows="10"
@@ -627,5 +628,38 @@
         aria-label="Закрыть"
       ></button>
     </section>
+    <section class="modal modal--map" id="modalMap" tabindex="0">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <img
+        src="img/map-modal.jpg"
+        alt="«Техномарт» на карте"
+        width="943"
+        height="442"
+      />
+      <button
+        id="modalMapClose"
+        class="modal-close"
+        type="button"
+        aria-label="Закрыть"
+      ></button>
+    </section>
+    <section class="modal" id="modalAddedToCart" tabindex="0">
+      <div class="product-added-to-cart">
+        <div class="product-added-to-cart-info">
+          <h3>Товар добавлен в корзину!</h3>
+        </div>
+        <div class="product-added-to-cart-buttons">
+          <a href="#" class="button">Оформить заказ</a>
+          <button class="button button--white">Продолжить покупки</button>
+        </div>
+      </div>
+      <button
+        id="modalCartCloseButton"
+        class="modal-close"
+        type="button"
+        aria-label="Закрыть"
+      ></button>
+    </section>
+    <script src="js/script.js"></script>
   </body>
 </html>

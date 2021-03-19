@@ -39,8 +39,8 @@
               </svg>
             </form>
             <a class="bookmark-link basic-link" href="#">Закладки: 0</a>
-            <a class="cart-link cart-link--added basic-link" href="#"
-              >Корзина: 10</a
+            <a class="cart-link basic-link" href="#"
+              >Корзина:&nbsp;<span id="cartCounter">10</span></a
             >
             <a href="#" class="place-order-link">Оформить заказ</a>
           </div>
@@ -286,7 +286,7 @@
                   class="check-input"
                 />
                 <span class="check-box check-box--radio"></span>
-                <div class="check-text">Сетевые</div>
+                <span class="check-text">Сетевые</span>
               </label>
             </fieldset>
             <button type="submit">Показать</button>
@@ -676,5 +676,23 @@
         </div>
       </section>
     </footer>
+    <section class="modal" id="modalAddedToCart" tabindex="0">
+      <div class="product-added-to-cart">
+        <div class="product-added-to-cart-info">
+          <h3>Товар добавлен в корзину!</h3>
+        </div>
+        <div class="product-added-to-cart-buttons">
+          <a href="#" class="button">Оформить заказ</a>
+          <button class="button button--white">Продолжить покупки</button>
+        </div>
+      </div>
+      <button
+        id="modalCartCloseButton"
+        class="modal-close"
+        type="button"
+        aria-label="Закрыть"
+      ></button>
+    </section>
+    <script src="js/script-catalog.js"></script>
   </body>
 </html>
