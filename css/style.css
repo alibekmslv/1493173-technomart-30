@@ -1104,6 +1104,10 @@ button.button {
   bottom: 4px;
 }
 
+.tab-content p {
+  max-width: 331px;
+}
+
 /* About */
 .about {
   display: grid;
@@ -1165,11 +1169,19 @@ button.button {
   text-align: center;
 }
 
+.company p {
+  max-width: 460px;
+  font-size: 13px;
+  line-height: 24px;
+}
+
 .contacts img {
   display: block;
 }
 
 .contacts p {
+  font-size: 13px;
+  line-height: 24px;
   margin-bottom: 32px;
 }
 
