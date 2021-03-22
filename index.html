@@ -12,7 +12,7 @@
     <header class="main-header">
       <div class="header-top header-top--bar">
         <div class="header-top-grid container">
-          <a href="index.html" class="main-header-logo">
+          <a href="#" class="main-header-logo">
             <img
               src="img/logo-technomart.svg"
               width="108"
@@ -63,37 +63,35 @@
           <a href="tel:+78125550505" class="phone-link">+7 (812) 555-05-55</a>
           <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
-        <div class="user-auth">
-          <div class="user-auth-guest">
-            <a href="#" class="user-auth-basic-button user-auth-sign-in"
-              ><svg
-                width="21"
-                height="17"
-                viewBox="0 0 21 17"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z"
-                  fill="#C5C5C5"
-                />
-                <path
-                  d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z"
-                  fill="#C5C5C5"
-                />
-              </svg>
-              <span>Войти</span>
-            </a>
-            <a href="#" class="user-auth-basic-button user-auth-sign-up"
-              >Регистрация</a
+        <div class="user-auth user-auth--guest">
+          <a href="#" class="user-auth-basic-button user-auth-sign-in"
+            ><svg
+              width="21"
+              height="17"
+              viewBox="0 0 21 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-          </div>
+              <path
+                d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z"
+                fill="#C5C5C5"
+              />
+              <path
+                d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z"
+                fill="#C5C5C5"
+              />
+            </svg>
+            <span>Войти</span>
+          </a>
+          <a href="#" class="user-auth-basic-button user-auth-sign-up"
+            >Регистрация</a
+          >
         </div>
       </div>
       <nav class="container">
         <ul class="site-navigation-list">
           <li class="site-navigation-item">
-            <a href="index.html">Главная</a>
+            <a href="#">Главная</a>
           </li>
           <li class="site-navigation-item">
             <a href="#">Компания</a>
@@ -143,54 +141,53 @@
             <h3>Доставка</h3>
             <a href="#">Бесплатно</a>
           </li>
-          <li class="feature-item-gallery">
-            <div class="gallery">
-              <div class="gallery-content">
-                <div class="gallery-content-text">
-                  <h3>Перфораторы</h3>
-                  <p>Настоящие мужские игрушки</p>
-                </div>
-                <figure>
-                  <img
-                    src="img/construction-worker-1.jpg"
-                    width="620"
-                    height="266"
-                    alt="Строитель с перфоратором"
-                  />
-                </figure>
-                <a href="catalog.html" class="button">Открыть каталог</a>
+          <li class="feature-item-gallery" id="gallery">
+            <div class="gallery-content">
+              <div class="gallery-content-text">
+                <h3>Дрели</h3>
+                <p>Соседям на радость!</p>
               </div>
-              <div class="gallery-content gallery-content--hidden">
-                <div class="gallery-content-text">
-                  <h3>Дрели</h3>
-                  <p>Соседям на радость!</p>
-                </div>
-                <figure>
-                  <img
-                    src="img/construction-worker-2.jpg"
-                    width="620"
-                    height="266"
-                    alt="Строитель с дрелью"
-                  />
-                </figure>
-                <a href="catalog.html" class="button">Открыть каталог</a>
+              <img
+                src="img/construction-worker-2.jpg"
+                width="620"
+                height="266"
+                alt="Строитель с дрелью"
+              />
+              <a href="catalog.html" class="button">Открыть каталог</a>
+            </div>
+            <div class="gallery-content">
+              <div class="gallery-content-text">
+                <h3>Перфораторы</h3>
+                <p>Настоящие мужские игрушки</p>
               </div>
-              <div class="gallery-arrow-controls">
-                <button type="button" aria-label="Назад"></button>
-                <button
-                  type="button"
-                  aria-label="Вперед"
-                  class="arrow-right"
-                ></button>
-              </div>
-              <div class="gallery-slide-controls">
-                <button type="button" aria-label="Первый слайд"></button>
-                <button
-                  type="button"
-                  aria-label="Второй слайд"
-                  class="current"
-                ></button>
-              </div>
+              <img
+                src="img/construction-worker-1.jpg"
+                width="620"
+                height="266"
+                alt="Строитель с перфоратором"
+              />
+              <a href="catalog.html" class="button">Открыть каталог</a>
+            </div>
+            <div class="gallery-arrow-controls">
+              <button type="button" aria-label="Назад" id="prevSlide"></button>
+              <button
+                type="button"
+                aria-label="Вперед"
+                class="arrow-right"
+                id="nextSlide"
+              ></button>
+            </div>
+            <div class="gallery-slide-controls">
+              <button
+                type="button"
+                class="gallery-dot"
+                aria-label="Первый слайд"
+              ></button>
+              <button
+                type="button"
+                aria-label="Второй слайд"
+                class="gallery-dot gallery-dot--current"
+              ></button>
             </div>
           </li>
         </ul>
@@ -432,29 +429,20 @@
               <button type="button" class="tab-button">Кредит</button>
             </li>
           </ul>
-          <div id="delivery" class="tab-content tab-content--active">
+          <div id="delivery" class="tab-content tab-content--delivery">
             <h3>Доставка</h3>
-            <img
-              src="img/delivery-truck.png"
-              width="468"
-              height="261"
-              alt="Грузовик доставки"
-            />
             <p>
-              Мы&nbsp;с&nbsp;удовольствием доставим ваш товар прямо
+              Мы&nbsp;с&nbsp;удовольствием доставим ваш товар прямо <br />
               к&nbsp;вашему подъезду совершенно бесплатно! <br />
               Ведь мы&nbsp;неплохо заработаем, <br />
               поднимая его на&nbsp;ваш этаж!
             </p>
           </div>
-          <div id="warranty" class="tab-content">
+          <div
+            id="warranty"
+            class="tab-content tab-content--warranty tab-content--active"
+          >
             <h3>Гарантия</h3>
-            <img
-              src="img/guarantee-label.png"
-              width="389"
-              height="283"
-              alt="Гарантийная печать"
-            />
             <p>
               Если купленный у&nbsp;нас товар поломается или заискрит,
               а&nbsp;также в&nbsp;случае пожара, спровоцированного его
@@ -463,19 +451,13 @@
               Дом уж&nbsp;восстановите как-нибудь сами.
             </p>
           </div>
-          <div id="credit" class="tab-content">
+          <div id="credit" class="tab-content tab-content--credit">
             <h3>Кредит</h3>
-            <img
-              src="img/credit-paper.png"
-              width="465"
-              height="285"
-              alt="Кредитный договор"
-            />
             <p>
               Залезть в&nbsp;долговую яму стало проще! <br />
               Кредитные консультанты придут вам на&nbsp;помощь.
             </p>
-            <button class="button button-salmon">Отправить заявку</button>
+            <button class="button">Отправить заявку</button>
           </div>
         </div>
       </section>
@@ -514,16 +496,21 @@
               alt="«Техномарт» на карте"
             />
           </a>
-          <button type="button" class="button" id="modalFeedbackTrigger">
+          <a
+            href="feedback.html"
+            class="button"
+            id="modalFeedbackTrigger"
+            aria-label="Форма обратной связи"
+          >
             Заблудились? Напишите нам!
-          </button>
+          </a>
         </div>
       </section>
     </main>
     <footer class="main-footer">
       <section class="top-footer container">
         <h2 class="visually-hidden">Дополнительная навигация по сайту</h2>
-        <a href="index.html" class="main-footer-logo">
+        <a href="#" class="main-footer-logo">
           <img
             src="img/logo-technomart.svg"
             width="138"
@@ -591,7 +578,7 @@
         </div>
       </div>
     </footer>
-    <section class="modal" id="modalFeedback" tabindex="0">
+    <section class="modal modal--feedback" id="modalFeedback" tabindex="0">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <form action="#" method="POST" class="feedback-form" id="feedbackForm">
         <div class="feedback-form-main">
@@ -635,12 +622,13 @@
     </section>
     <section class="modal modal--map" id="modalMap" tabindex="0">
       <h2 class="visually-hidden">Форма обратной связи</h2>
-      <img
-        src="img/map-modal.jpg"
-        alt="«Техномарт» на карте"
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
         width="943"
         height="442"
-      />
+        allowfullscreen
+        title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"
+      ></iframe>
       <button
         id="modalMapClose"
         class="modal-close"
@@ -662,6 +650,5 @@
       ></button>
     </section>
     <script src="js/script.js"></script>
-    <script src="js/script-cart.js"></script>
   </body>
 </html>
