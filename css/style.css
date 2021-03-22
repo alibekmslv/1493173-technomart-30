@@ -1077,7 +1077,8 @@ a {
   background-color: var(--basic-blue);
 }
 
-.tab-button.tab-button--active {
+.tab-button.tab-button--active,
+.tab-button:hover.tab-button--active {
   color: var(--basic-blue);
   background-color: var(--white);
 }
@@ -1815,7 +1816,7 @@ a {
   border: 1px solid var(--basic-borderline);
   border-radius: 2px;
   padding: 10px 15px;
-  margin-right: 10px;
+  margin-right: 9px;
   color: var(--black);
 }
 .page-pagination-list a:hover {

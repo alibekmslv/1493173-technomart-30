@@ -27,6 +27,17 @@ const gallery = document.getElementById("gallery");
 const prevSlide = document.getElementById("prevSlide");
 const nextSlide = document.getElementById("nextSlide");
 
+// Tabs Related Vars
+const tabsList = document.querySelector(".tabs-list");
+
+// Product Sort Related Buttons
+const productSortTypeButtons = document.querySelectorAll(
+  ".product-sort-type button"
+);
+const productSortDirectionButtons = document.querySelectorAll(
+  ".product-sort-direction button"
+);
+
 isCartEmpty();
 
 // Modal Feedback
@@ -153,4 +164,66 @@ function showSlides(n) {
 
   slides[slideIndex - 1].classList.remove("gallery-content--hidden");
   dots[slideIndex - 1].classList.add("gallery-dot--current");
+}
+
+// Tabs
+
+if (tabsList) {
+  const tabs = document.getElementsByClassName("tab-button");
+  openTab(0);
+
+  for (let i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener("click", function () {
+      openTab(i);
+    });
+  }
+}
+
+function openTab(index) {
+  let tabcontent = document.getElementsByClassName("tab-content");
+  let tablinks = document.getElementsByClassName("tab-button");
+
+  for (let i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].classList.remove("tab-content--active");
+  }
+
+  for (let i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("tab-button--active");
+  }
+
+  tabcontent[index].classList.add("tab-content--active");
+  tablinks[index].classList.add("tab-button--active");
+}
+
+//Product Sort Buttons
+if (productSortTypeButtons) {
+  for (const button of productSortTypeButtons) {
+    button.addEventListener("click", function (e) {
+      if (e.target.classList.contains("product-sort-type-button--active")) {
+        return;
+      } else {
+        productSortTypeButtons.forEach(function (item) {
+          item.classList.remove("product-sort-type-button--active");
+        });
+        e.target.classList.add("product-sort-type-button--active");
+      }
+    });
+  }
+}
+
+if (productSortDirectionButtons) {
+  for (const button of productSortDirectionButtons) {
+    button.addEventListener("click", function (e) {
+      if (
+        e.target.classList.contains("product-sort-direction-button--active")
+      ) {
+        return;
+      } else {
+        productSortDirectionButtons.forEach(function (item) {
+          item.classList.remove("product-sort-direction-button--active");
+        });
+        e.target.classList.add("product-sort-direction-button--active");
+      }
+    });
+  }
 }
