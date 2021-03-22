@@ -1862,14 +1862,6 @@ a {
 .modal {
   display: none;
   position: fixed;
-  top: 0;
-  bottom: 0;
-  left: -15px;
-  right: 0;
-  margin: auto;
-  /* transform: translate(-50%, -50%);
-  top: 50%;
-  left: 49.4%; */
   border-top: 7px solid var(--basic-red);
   outline: none;
   box-shadow: 0px 4px 20px var(--default-box-shadow);
@@ -1878,8 +1870,7 @@ a {
 .modal--show {
   display: block;
   animation: bounce 0.6s;
-  top: 120px;
-  bottom: auto;
+  background-color: var(--white);
 }
 
 .modal--error {
@@ -1901,8 +1892,10 @@ a {
 
 /* Modal Feedback */
 .modal--feedback {
-  width: 620px;
+  top: calc(50vh - calc(430px / 2));
+  left: calc(50vw - calc(636px / 2));
 }
+
 .feedback-form {
   display: grid;
   grid-template-rows: auto 112px;
@@ -1968,7 +1961,8 @@ a {
 
 /* Modal Map */
 .modal--map {
-  width: 943px;
+  top: calc(50vh - calc(450px / 2));
+  left: calc(50vw - calc(966px / 2));
 }
 
 .modal--map img {
@@ -1978,8 +1972,8 @@ a {
 /* Modal Added To Cart */
 .modal--cart {
   width: 620px;
-  left: 30px;
-  background-color: var(--white);
+  top: calc(50vh - calc(282px / 2));
+  left: calc(50vw - calc(588px / 2));
 }
 
 .modal--cart span {
