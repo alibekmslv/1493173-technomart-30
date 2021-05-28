@@ -28,7 +28,7 @@ const prevSlide = document.getElementById("prevSlide");
 const nextSlide = document.getElementById("nextSlide");
 
 // Tabs Related Vars
-const tabsList = document.querySelector(".tabs-list");
+const tabs = document.querySelector(".tabs");
 
 // Product Sort Related Buttons
 const productSortTypeButtons = document.querySelectorAll(
@@ -125,7 +125,7 @@ if (gallery) {
     plusSlides(1);
   });
 
-  const controls = document.getElementsByClassName("gallery-dot");
+  const controls = document.getElementsByClassName("gallery__dot");
   for (let i = 0; i < controls.length; i++) {
     controls[i].addEventListener("click", function () {
       currentSlide(i + 1);
@@ -143,8 +143,8 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("gallery-content");
-  let dots = document.getElementsByClassName("gallery-dot");
+  let slides = document.getElementsByClassName("gallery__slide");
+  let dots = document.getElementsByClassName("gallery__dot");
 
   if (n > slides.length) {
     slideIndex = 1;
@@ -155,44 +155,44 @@ function showSlides(n) {
   }
 
   for (i = 0; i < slides.length; i++) {
-    slides[i].classList.add("gallery-content--hidden");
+    slides[i].classList.add("gallery__slide--hidden");
   }
 
   for (i = 0; i < dots.length; i++) {
-    dots[i].classList.remove("gallery-dot--current");
+    dots[i].classList.remove("gallery__dot--current");
   }
 
-  slides[slideIndex - 1].classList.remove("gallery-content--hidden");
-  dots[slideIndex - 1].classList.add("gallery-dot--current");
+  slides[slideIndex - 1].classList.remove("gallery__slide--hidden");
+  dots[slideIndex - 1].classList.add("gallery__dot--current");
 }
 
 // Tabs
 
-if (tabsList) {
-  const tabs = document.getElementsByClassName("tab-button");
+if (tabs) {
+  const tabsTabs = document.getElementsByClassName("tabs__tab");
   openTab(0);
 
-  for (let i = 0; i < tabs.length; i++) {
-    tabs[i].addEventListener("click", function () {
+  for (let i = 0; i < tabsTabs.length; i++) {
+    tabsTabs[i].addEventListener("click", function () {
       openTab(i);
     });
   }
 }
 
 function openTab(index) {
-  let tabcontent = document.getElementsByClassName("tab-content");
-  let tablinks = document.getElementsByClassName("tab-button");
+  const tabsTabpanels = document.getElementsByClassName("tabs__tabpanel");
+  const tabsTabs = document.getElementsByClassName("tabs__tab");
 
-  for (let i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].classList.remove("tab-content--active");
+  for (let i = 0; i < tabsTabpanels.length; i++) {
+    tabsTabpanels[i].classList.remove("tabs__tabpanel--active");
   }
 
-  for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.remove("tab-button--active");
+  for (let i = 0; i < tabsTabs.length; i++) {
+    tabsTabs[i].classList.remove("tabs__tab--selected");
   }
 
-  tabcontent[index].classList.add("tab-content--active");
-  tablinks[index].classList.add("tab-button--active");
+  tabsTabpanels[index].classList.add("tabs__tabpanel--active");
+  tabsTabs[index].classList.add("tabs__tab--selected");
 }
 
 //Product Sort Buttons
