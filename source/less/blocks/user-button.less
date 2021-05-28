@@ -1,0 +1,46 @@
+.user-button {
+  display: flex;
+  align-items: center;
+  font-size: 1.313em;
+  line-height: 1;
+  color: @black;
+  background-color: @white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  &:hover {
+    color: @basic-red;
+  }
+
+  &:active {
+    color: @basic-greylight;
+  }
+}
+
+.user-button--sign-in {
+  width: 121px;
+  box-sizing: border-box;
+  padding-left: 19px;
+  padding-right: 27px;
+
+  .user-button__icon {
+    margin-right: 6px;
+  }
+
+  &:hover .user-button__icon {
+    fill: @basic-grey;
+  }
+
+  &:active .user-button__icon {
+    fill: @basic-greylight;
+  }
+}
+
+.user-button--sign-up {
+  width: 150px;
+  justify-content: center;
+}
+
+.user-button__icon {
+  fill: @basic-greylight;
+}

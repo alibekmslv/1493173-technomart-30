@@ -1,0 +1,23 @@
+.label-new {
+  position: relative;
+  overflow: hidden;
+}
+
+.label-new::before {
+  content: "New";
+  display: block;
+  position: absolute;
+  width: 100px;
+  top: 9px;
+  right: -28px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  background-color: @basic-red;
+  padding: 6px 0;
+  transform: rotate(45deg);
+}
