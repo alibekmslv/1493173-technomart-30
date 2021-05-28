@@ -1,0 +1,23 @@
+
+.feedback {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 51px;
+}
+
+.feedback__description {
+  margin-left: 0;
+}
+
+.feedback__link {
+  color: @special-yellowlight;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    text-decoration: none;
+    color: @basic-red;
+  }
+}
