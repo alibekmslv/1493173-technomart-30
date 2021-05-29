@@ -28,7 +28,9 @@ const prevSlide = document.getElementById("prevSlide");
 const nextSlide = document.getElementById("nextSlide");
 
 // Tabs Related Vars
-const tabs = document.querySelector(".tabs");
+// const tabs = document.querySelector(".tabs");
+const tabs = document.querySelectorAll('[role="tab"]');
+const tabList = document.querySelector('[role="tablist"]');
 
 // Product Sort Related Buttons
 const productSortTypeButtons = document.querySelectorAll(
@@ -167,32 +169,69 @@ function showSlides(n) {
 }
 
 // Tabs
-
 if (tabs) {
-  const tabsTabs = document.getElementsByClassName("tabs__tab");
-  openTab(0);
+  tabs.forEach(tab => {
+    tab.addEventListener("click", changeTabs);
+  });
 
-  for (let i = 0; i < tabsTabs.length; i++) {
-    tabsTabs[i].addEventListener("click", function () {
-      openTab(i);
-    });
-  }
+  // Enable arrow navigation between tabs in the tab list
+  let tabFocus = 0;
+
+  tabList.addEventListener("keydown", e => {
+    // Move down
+    if (e.keyCode === 40 || e.keyCode === 38) {
+      e.preventDefault();
+      tabs[tabFocus].setAttribute("tabindex", -1);
+      if (e.keyCode === 40) {
+        tabFocus++;
+        // If we're at the end, go to the start
+        if (tabFocus >= tabs.length) {
+          tabFocus = 0;
+        }
+        // Move up
+      } else if (e.keyCode === 38) {
+        tabFocus--;
+        // If we're at the start, move to the end
+        if (tabFocus < 0) {
+          tabFocus = tabs.length - 1;
+        }
+      }
+
+      tabs[tabFocus].setAttribute("tabindex", 0);
+      tabs[tabFocus].focus();
+    }
+  });
 }
 
-function openTab(index) {
-  const tabsTabpanels = document.getElementsByClassName("tabs__tabpanel");
-  const tabsTabs = document.getElementsByClassName("tabs__tab");
+function changeTabs(e) {
+  const target = e.target;
+  const parent = target.parentNode;
+  const grandparent = parent.parentNode;
 
-  for (let i = 0; i < tabsTabpanels.length; i++) {
-    tabsTabpanels[i].classList.remove("tabs__tabpanel--active");
-  }
+  // Remove all current selected tabs
+  parent
+    .querySelectorAll('[aria-selected="true"]')
+    .forEach(t => {
+      t.setAttribute("aria-selected", false);
+      t.classList.remove("tabs__tab--selected");
+    });
 
-  for (let i = 0; i < tabsTabs.length; i++) {
-    tabsTabs[i].classList.remove("tabs__tab--selected");
-  }
+  // Set this tab as selected
+  target.setAttribute("aria-selected", true);
+  target.classList.add("tabs__tab--selected");
 
-  tabsTabpanels[index].classList.add("tabs__tabpanel--active");
-  tabsTabs[index].classList.add("tabs__tab--selected");
+  // Hide all tab panels
+  grandparent
+    .querySelectorAll('[role="tabpanel"]')
+    .forEach(p => {
+      p.setAttribute("hidden", true);
+      p.classList.remove("tabs__tabpanel--active");
+    });
+
+  // Show the selected panel
+  const selectedPanel = grandparent.querySelector(`#${target.getAttribute("aria-controls")}`);
+  selectedPanel.removeAttribute("hidden");
+  selectedPanel.classList.add("tabs__tabpanel--active");
 }
 
 //Product Sort Buttons

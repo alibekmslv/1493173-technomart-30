@@ -72,7 +72,7 @@ const copyImages = () => {
     .pipe(gulp.dest("build/img"))
 }
 
-exports.images = copyImages;
+exports.copyImages = copyImages;
 
 // WebP
 
