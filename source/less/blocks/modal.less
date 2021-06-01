@@ -1,0 +1,158 @@
+.modal {
+  display: none;
+  position: fixed;
+  border-top: 7px solid @basic-red;
+  outline: none;
+  box-shadow: 0px 4px 20px @default-box-shadow;
+}
+
+.modal--show {
+  display: block;
+  animation: bounce 0.6s;
+  background-color: @white;
+}
+
+.modal--error {
+  animation: shake 0.6s;
+}
+
+.modal__close {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 14px;
+  right: 11px;
+  border: none;
+  background-image: url("../img/icon-close.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* Modal Feedback */
+.modal--feedback {
+  top: calc(50vh - calc(430px / 2));
+  left: calc(50vw - calc(636px / 2));
+}
+
+.feedback-form {
+  display: grid;
+  grid-template-rows: auto 112px;
+  background-color: @white;
+  margin: 0 auto;
+}
+
+.feedback-form-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 460px;
+  column-gap: 21px;
+  row-gap: 14px;
+  margin: 40px 80px 37px;
+}
+
+.feedback-form-main label {
+  font-size: 18px;
+  line-height: 24px;
+  color: @black;
+  margin-bottom: 10px;
+}
+
+.feedback-form-main input,
+.feedback-form-main textarea {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-bottom: 5px;
+  border-radius: 2px;
+  border: 2px solid @basic-greylight;
+}
+
+.feedback-form-main textarea {
+  padding-bottom: 10px;
+  resize: none;
+}
+
+.feedback-sender-text {
+  grid-column: 1 / 3;
+}
+
+.feedback-form-main div {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @modal-bottom;
+}
+
+.feedback-form-submit button {
+  width: 460px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+}
+
+/* Modal Map */
+.modal--map {
+  top: calc(50vh - calc(450px / 2));
+  left: calc(50vw - calc(966px / 2));
+}
+
+.modal--map img {
+  display: block;
+}
+
+/* Modal Added To Cart */
+.modal--cart {
+  width: 620px;
+  top: calc(50vh - calc(282px / 2));
+  left: calc(50vw - calc(588px / 2));
+}
+
+.modal--cart span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 48px;
+  margin-bottom: 50px;
+  margin-left: 81px;
+}
+
+.modal--cart span::before {
+  content: "";
+  display: block;
+  width: 66px;
+  height: 66px;
+  top: 0;
+  left: 0;
+  background-image: url("../img/icon-mark.svg");
+  margin-right: 30px;
+}
+
+.modal--cart-controls {
+  display: flex;
+  background-color: @modal-bottom;
+  padding-top: 36px;
+  padding-bottom: 37px;
+  padding-left: 114px;
+}
+
+.modal--cart-controls .button {
+  text-align: center;
+  width: 192px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  margin-right: 10px;
+}
+
+.modal--cart .modal-close {
+  top: 11px;
+}
