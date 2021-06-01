@@ -1,0 +1,101 @@
+.tabs {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+}
+
+.tabs__heading {
+  margin-bottom: 30px;
+}
+
+.tabs__list {
+  position: relative;
+  margin-top: 3px;
+  display: grid;
+  align-self: flex-start;
+}
+
+.tabs__list::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 279px;
+  right: 0;
+  top: -49px;
+  background-image: url("../img/vertical-shadow.png");
+}
+
+.tabs__tab {
+  font-size: 1.313em;
+  line-height: 1.875rem;
+  font-weight: 700;
+  text-align: left;
+  padding-top: 12.5px;
+  padding-right: 0;
+  padding-bottom: 17.5px;
+  padding-left: 22px;
+  cursor: pointer;
+  border-top-width: 1px;
+  border-right-width: 0;
+  border-bottom-width: 1px;
+  border-left-width: 0;
+  border-top-color: @tab-top-border;
+  border-bottom-color: @special-blue-dark;
+  color: @white;
+  background-color: @basic-blue;
+
+  &:hover {
+    background-color: @special-blue-dark;
+    border-top-color: @tab-top-border;
+    border-bottom-color: @special-blue-dark;
+  }
+
+  &:active {
+    color: @basic-blue;
+    background-color: @white;
+    border-top-color: @white;
+    border-bottom-color: @white;
+  }
+}
+
+.tabs__tab--selected {
+  color: @basic-blue;
+  background-color: @white;
+  border-top-color: @white;
+  border-bottom-color: @white;
+
+  &:hover {
+    background-color: @white;
+    border-top-color: @white;
+    border-bottom-color: @white;
+  }
+}
+
+.tabs__tabpanel {
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  margin-right: -10px;
+}
+
+.tabs__tabpanel--delivery {
+  background-image: url("../img/backgrounds/delivery-truck.png");
+}
+
+.tabs__tabpanel--warranty {
+  background-image: url("../img/backgrounds/guarantee-label.png");
+}
+
+.tabs__tabpanel--credit {
+  background-image: url("../img/backgrounds/credit-paper.png");
+}
+
+.tabs__button {
+  margin-top: 30px;
+}
+
+.tabs__tabpanel--active {
+  display: block;
+  position: relative;
+  min-height: 287px;
+  margin-left: 80px;
+}

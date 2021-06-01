@@ -1,0 +1,60 @@
+.user-button {
+  display: flex;
+  align-items: center;
+  font-size: 1.313em;
+  line-height: 1;
+  color: @black;
+  background-color: @white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.user-button:hover {
+  color: @basic-red;
+
+  .user-button__icon {
+    fill: @basic-grey;
+  }
+}
+
+.user-button:active {
+  color: @basic-greylight;
+
+  .user-button__icon {
+    fill: @basic-greylight;
+  }
+}
+
+.user-button--sign-in {
+  width: 121px;
+  box-sizing: border-box;
+  padding-left: 19px;
+  padding-right: 27px;
+
+  .user-button__icon {
+    margin-right: 6px;
+  }
+}
+
+.user-button--sign-up {
+  width: 150px;
+  justify-content: center;
+}
+
+.user-button__icon {
+  fill: @basic-greylight;
+}
+
+.user-button--username {
+  padding-left: 15px;
+  padding-right: 20px;
+
+  .user-button__icon {
+    margin-top: 1px;
+    margin-right: 21px;
+  }
+}
+
+.user-button--sign-out {
+  padding-right: 17px;
+}

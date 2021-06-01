@@ -1,0 +1,32 @@
+.button {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  min-width: 192px;
+  color: @white;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: @basic-red;
+  padding: 11px 0 9px;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: @special-red;
+  }
+
+  &:active {
+    background-color: @error;
+  }
+}
+
+.button--white,
+.button--white:hover,
+.button--white:active {
+  background-color: @white;
+  color: @black;
+}
+
+.button--block {
+  display: block;
+}

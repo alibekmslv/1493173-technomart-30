@@ -1,0 +1,47 @@
+.user-auth {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.user-auth--guest {
+  column-gap: 10px;
+}
+
+.user-auth__personal-links {
+  grid-column: ~"1 / 3";
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+.user-auth__link {
+  font-size: 1em;
+  line-height: 1.125rem;
+  color: @basic-blue;
+
+  &:hover {
+    color: @basic-red;
+  }
+
+  &:active {
+    color: @basic-greylight;
+  }
+}
+
+.user-auth__link:not(:last-child) {
+  position: relative;
+  padding-right: 2rem;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    right: 14px;
+    top: 7px;
+    border-radius: 50%;
+    background-color: @basic-blue;
+  }
+}

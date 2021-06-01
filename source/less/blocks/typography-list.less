@@ -1,0 +1,23 @@
+.typography-list {
+  font-size: 1.125em;
+  line-height: 1.5rem;
+  list-style-type: none;
+  font-weight: normal;
+  padding-left: 0;
+}
+
+.typography-list__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.typography-list__item::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin-right: 12px;
+  background-color: @basic-red;
+}

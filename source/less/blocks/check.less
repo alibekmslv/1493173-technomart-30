@@ -1,0 +1,49 @@
+.check {
+  position: relative;
+  display: grid;
+  grid-template-columns: 35px min-content;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.938em;
+  line-height: 1.188rem;
+}
+
+.check__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.check__icon {
+  justify-self: flex-start;
+  fill: @basic-greylight;
+}
+
+.check__input:hover + .check__icon,
+.check__input:focus + .check__icon {
+  fill: @checkbox-hover;
+}
+
+.check__input:disabled + .check__icon {
+  fill: @checkbox-hover;
+  opacity: 0.3;
+}
+
+.check__input:not(:checked) + .check__icon {
+  .check__icon-checkbox-on,
+  .check__icon-radio-on {
+    display: none;
+  }
+}
+
+.check__input:checked + .check__icon{
+  .check__icon-checkbox-off,
+  .check__icon-radio-off {
+    display: none;
+  }
+}
+
+.check--checkbox .check__input:checked + .check__icon {
+  width: 27px;
+}

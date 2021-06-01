@@ -1,0 +1,26 @@
+.socials-list {
+  display: flex;
+  align-items: flex-start;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.socials-list__item:not(:last-of-type) {
+  margin-right: 1px;
+}
+
+.socials-list__link {
+  display: flex;
+  color: @white;
+}
+
+.socials-list__icon{
+  fill: @dark-blue;
+}
+
+.socials-list__icon:hover,
+.socials-list__icon:active {
+  fill: @basic-red;
+}
