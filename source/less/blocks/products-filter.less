@@ -1,0 +1,86 @@
+.products-filter {
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.products-filter__heading {
+  font-size: 0.813em;
+  line-height: 1.125rem;
+  font-weight: 400;
+  background-color: @special-biege;
+  padding: 10px 0 10px 18px;
+  margin: 0;
+}
+
+
+.products-filter__fieldset {
+  padding: 0;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom: 1px solid @basic-borderline;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.products-filter__fieldset:last-of-type {
+  border-bottom-width: 0;
+}
+
+.products-filter__fieldset--price {
+  margin-top: 14.15px;
+  padding-bottom: 25px;
+
+  .products-filter__legend {
+    margin-bottom: 10.85px;
+  }
+}
+
+.products-filter__fieldset--manufacturers {
+  margin-top: 16px;
+  padding-bottom: 26px;
+
+  .products-filter__legend {
+    margin-bottom: 15px;
+  }
+
+  .check:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.products-filter__fieldset--power-supply {
+  margin-top: 18px;
+  padding-bottom: 34.15px;
+
+  .products-filter__legend {
+    margin-bottom: 20.85px;
+  }
+
+  .check:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.products-filter__legend {
+  font-size: 1.063em;
+  line-height: 1.875rem;
+  font-weight: 700;
+}
+
+.products-filter__submit {
+  display: block;
+  width: 100%;
+  font-size: 0.813em;
+  line-height: 1.125rem;
+  color: @black;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border-radius: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @basic-borderline;
+  cursor: pointer;
+}

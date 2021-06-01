@@ -7,13 +7,21 @@
   background-color: @white;
   padding-top: 12px;
   padding-bottom: 12px;
+}
 
-  &:hover {
-    color: @basic-red;
+.user-button:hover {
+  color: @basic-red;
+
+  .user-button__icon {
+    fill: @basic-grey;
   }
+}
 
-  &:active {
-    color: @basic-greylight;
+.user-button:active {
+  color: @basic-greylight;
+
+  .user-button__icon {
+    fill: @basic-greylight;
   }
 }
 
@@ -26,14 +34,6 @@
   .user-button__icon {
     margin-right: 6px;
   }
-
-  &:hover .user-button__icon {
-    fill: @basic-grey;
-  }
-
-  &:active .user-button__icon {
-    fill: @basic-greylight;
-  }
 }
 
 .user-button--sign-up {
@@ -43,4 +43,18 @@
 
 .user-button__icon {
   fill: @basic-greylight;
+}
+
+.user-button--username {
+  padding-left: 15px;
+  padding-right: 20px;
+
+  .user-button__icon {
+    margin-top: 1px;
+    margin-right: 21px;
+  }
+}
+
+.user-button--sign-out {
+  padding-right: 17px;
 }

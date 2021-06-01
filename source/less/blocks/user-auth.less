@@ -1,94 +1,47 @@
-.user-auth--guest {
+.user-auth {
   display: grid;
   grid-template-columns: auto auto;
+}
+
+.user-auth--guest {
   column-gap: 10px;
 }
 
-.user-auth-sign-up {
-  padding-left: 24px;
-  padding-right: 24px;
-  margin-left: 10px;
-}
-
-.user-auth-logged-in {
-  display: grid;
-  grid-template-columns: max-content auto;
-  padding-left: 15px;
-  padding-right: 17px;
-}
-
-.user-auth-username {
-  display: flex;
-  align-items: center;
-  color: @black;
-}
-
-.user-auth-username:hover path {
-  fill: @basic-grey;
-}
-
-.user-auth-username:active path {
-  fill: @basic-greylight;
-}
-
-.user-auth-username span {
-  text-align: center;
-  margin-left: 21px;
-  max-width: 186px;
-}
-
-.user-auth-username:active span {
-  color: @basic-greylight;
-}
-
-.user-auth-logout {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-
-.user-auth-logout:hover path {
-  fill: @basic-grey;
-}
-
-.user-auth-logout:active path {
-  fill: @basic-greylight;
-}
-
-.user-auth-personal-links {
+.user-auth__personal-links {
+  grid-column: ~"1 / 3";
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 7px;
 }
 
-.user-auth-personal-links a:not(:last-child) {
-  position: relative;
-  padding-right: 32px;
-}
-
-.user-auth-personal-links a:not(:last-child)::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  right: 14px;
-  top: 7px;
-  border-radius: 50%;
-  background-color: @basic-blue;
-}
-
-.user-auth-personal-links a {
-  font-size: 1rem;
-  line-height: 1.125;
+.user-auth__link {
+  font-size: 1em;
+  line-height: 1.125rem;
   color: @basic-blue;
+
+  &:hover {
+    color: @basic-red;
+  }
+
+  &:active {
+    color: @basic-greylight;
+  }
 }
 
-.user-auth-personal-links a:hover {
-  color: @basic-red;
-}
+.user-auth__link:not(:last-child) {
+  position: relative;
+  padding-right: 2rem;
 
-.user-auth-personal-links a:active {
-  color: @basic-greylight;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    right: 14px;
+    top: 7px;
+    border-radius: 50%;
+    background-color: @basic-blue;
+  }
 }
