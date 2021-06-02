@@ -1,12 +1,4 @@
-// Map Related Vars
-const modalMapTrigger = document.getElementById("modalMapTrigger");
-const modalMap = document.getElementById("modalMap");
-const modalMapClose = document.getElementById("modalMapClose");
-
 //  Feedback Related Vars
-const modalFeedbackTrigger = document.getElementById("modalFeedbackTrigger");
-const modalFeedback = document.getElementById("modalFeedback");
-const modalFeedbackClose = document.getElementById("modalFeedbackClose");
 const feedbackForm = document.getElementById("feedbackForm");
 const feedbackFormName = document.getElementById("feedback-sender-name");
 const feedbackFormEmail = document.getElementById("feedback-sender-email");
@@ -16,11 +8,7 @@ const feedbackFormText = document.getElementById("feedback-sender-text");
 const productsList = document.querySelector(".products-list");
 const cartLink = document.querySelector(".cart-link");
 const cartCounter = document.getElementById("cartCounter");
-const modalAddedToCart = document.getElementById("modalAddedToCart");
-const modalCartCloseButton = document.getElementById("modalCartCloseButton");
-const modalCartContinueShoppingButton = document.querySelector(
-  ".modal--cart-controls button"
-);
+const modalTriggers = document.querySelectorAll(".modal-trigger")
 
 // Gallery Related Vars
 const gallery = document.getElementById("gallery");
@@ -40,78 +28,70 @@ const productSortDirectionButtons = document.querySelectorAll(
   ".product-sort-direction button"
 );
 
-isCartEmpty();
+// isCartEmpty();
 
-// Modal Feedback
-if (modalFeedbackTrigger) {
-  modalFeedbackTrigger.addEventListener("click", function (e) {
+modalTriggers.forEach((item) => {
+  item.addEventListener('click', function (e) {
     e.preventDefault();
-    modalFeedback.classList.add("modal--show");
-    modalFeedback.focus();
-  });
+    const modalId = this.dataset.modalId;
+    openModal(modalId);
+  })
+})
 
-  modalFeedbackClose.addEventListener("click", function () {
-    modalFeedback.classList.remove("modal--show", "modal--error");
-  });
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.classList.add('modal--show');
+  modal.focus();
 
-  feedbackForm.addEventListener("submit", function (e) {
-    if (
-      !feedbackFormName.value ||
-      !feedbackFormEmail.value ||
-      !feedbackFormText.value
-    ) {
-      e.preventDefault();
-      modalFeedback.classList.add("modal--error");
-    }
-  });
+  closeModal(modal);
 }
 
-// Modal Map
-if (modalMapTrigger) {
-  modalMapTrigger.addEventListener("click", function (e) {
-    e.preventDefault();
-    modalMap.classList.add("modal--show");
-    modalMap.focus();
+function closeModal(modal) {
+  modal.addEventListener('keydown', (e) => {
+    e.code === 'Escape' ? modal.classList.remove('modal--show') : null;
   });
 
-  modalMapClose.addEventListener("click", function () {
-    modalMap.classList.remove("modal--show");
+  const closeModalTriggers = modal.querySelectorAll('.modal__close-trigger');
+  closeModalTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      modal.classList.remove('modal--show');
+    })
   });
 }
 
 // Modal Cart
-if (productsList) {
-  modalCartCloseButton.addEventListener("click", modalCartClose);
-  modalCartContinueShoppingButton.addEventListener("click", modalCartClose);
+// if (productsList) {
+//   modalCartCloseButton.addEventListener("click", modalCartClose);
+//   modalCartContinueShoppingButton.addEventListener("click", modalCartClose);
 
-  productsList.addEventListener("click", function (e) {
-    const isAddToCartButton = e.target.classList.contains(
-      "product-item-buy-button"
-    );
-    if (isAddToCartButton) {
-      cartCounter.innerText = Number(cartCounter.innerText) + 1;
-      modalCartOpen();
-      isCartEmpty();
-      modalAddedToCart.focus();
-    }
-  });
-}
+//   productsList.addEventListener("click", function (e) {
+//     const isAddToCartButton = e.target.classList.contains(
+//       "product-item-buy-button"
+//     );
+//     if (isAddToCartButton) {
+//       cartCounter.innerText = Number(cartCounter.innerText) + 1;
+//       modalCartOpen();
+//       isCartEmpty();
+//       modalAddedToCart.focus();
+//     }
+//   });
+// }
 
-function isCartEmpty() {
-  if (Number(cartCounter.innerText)) {
-    cartLink.classList.add("cart-link--added");
-  } else {
-    return;
-  }
-}
+// function isCartEmpty() {
+//   if (Number(cartCounter.innerText)) {
+//     cartLink.classList.add("cart-link--added");
+//   } else {
+//     return;
+//   }
+// }
 
-function modalCartOpen() {
-  modalAddedToCart.classList.add("modal--show");
-}
+// function modalCartOpen() {
+//   modalAddedToCart.classList.add("modal--show");
+// }
 
-function modalCartClose() {
-  modalAddedToCart.classList.remove("modal--show");
-}
+// function modalCartClose() {
+//   modalAddedToCart.classList.remove("modal--show");
+// }
 
 // Gallery
 let slideIndex = 2;
