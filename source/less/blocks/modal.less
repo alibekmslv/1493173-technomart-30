@@ -3,7 +3,7 @@
   position: fixed;
   border-top: 7px solid @basic-red;
   outline: none;
-  box-shadow: 0px 4px 20px @default-box-shadow;
+  box-shadow: 0 4px 20px @default-box-shadow;
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%);
@@ -42,45 +42,36 @@
   border-width: 0;
 }
 
+.modal__cart-wrapper {
+  width: 620px;
+  display: grid;
+  grid-template-rows: auto auto;
+}
 
-.modal--cart span {
+
+.modal__cart-title {
   position: relative;
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  line-height: 30px;
-  margin-top: 48px;
-  margin-bottom: 50px;
-  margin-left: 81px;
-}
-
-.modal--cart span::before {
-  content: "";
   display: block;
-  width: 66px;
-  height: 66px;
-  top: 0;
-  left: 0;
-  background-image: url("../img/icon-mark.svg");
-  margin-right: 30px;
+  font-size: 1.5em;
+  line-height: 1.875rem;
+  margin-top: 66px;
+  margin-right: auto;
+  margin-bottom: 68px;
+  margin-left: auto;
 }
 
-.modal--cart-controls {
-  display: flex;
+.modal__icon-title {
+  position: absolute;
+  left: -95px;
+  top: -18px;
+}
+
+.modal__cart-controls {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  column-gap: 10px;
   background-color: @modal-bottom;
-  padding-top: 36px;
+  padding-top: 37px;
   padding-bottom: 37px;
-  padding-left: 114px;
-}
-
-.modal--cart-controls .button {
-  text-align: center;
-  width: 192px;
-  padding-top: 11px;
-  padding-bottom: 9px;
-  margin-right: 10px;
-}
-
-.modal--cart .modal-close {
-  top: 11px;
 }
