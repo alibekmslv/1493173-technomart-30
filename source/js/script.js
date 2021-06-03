@@ -16,7 +16,6 @@ const prevSlide = document.getElementById("prevSlide");
 const nextSlide = document.getElementById("nextSlide");
 
 // Tabs Related Vars
-// const tabs = document.querySelector(".tabs");
 const tabs = document.querySelectorAll('[role="tab"]');
 const tabList = document.querySelector('[role="tablist"]');
 
@@ -29,14 +28,15 @@ const productSortDirectionButtons = document.querySelectorAll(
 );
 
 // isCartEmpty();
-
-modalTriggers.forEach((item) => {
-  item.addEventListener('click', function (e) {
-    e.preventDefault();
-    const modalId = this.dataset.modalId;
-    openModal(modalId);
+if (modalTriggers.length > 0) {
+  modalTriggers.forEach((item) => {
+    item.addEventListener('click', function (e) {
+      e.preventDefault();
+      const modalId = this.dataset.modalId;
+      openModal(modalId);
+    })
   })
-})
+}
 
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
@@ -149,7 +149,7 @@ function showSlides(n) {
 }
 
 // Tabs
-if (tabs) {
+if (tabs.length > 0) {
   tabs.forEach(tab => {
     tab.addEventListener("click", changeTabs);
   });
