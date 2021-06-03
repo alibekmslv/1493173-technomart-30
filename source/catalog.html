@@ -237,6 +237,9 @@
           <div class="product-card__action-buttons">
             <button type="button" class="product-card__button product-card__button--buy modal-trigger"
               data-modal-id="modalAddedToCart" aria-label="Добавить «Перфоратор BOSCH BFG 6000» в корзину">
+              <svg class="product-card__button-icon" width="15" height="15">
+                <use class="product-card__icon-cart" href="img/sprite.svg#icon-cart"></use>
+              </svg>
               Купить
             </button>
             <button type="button" class="product-card__button product-card__button--bookmark "
@@ -255,6 +258,9 @@
           <div class="product-card__action-buttons">
             <button type="button" class="product-card__button product-card__button--buy modal-trigger"
               data-modal-id="modalAddedToCart" aria-label="Добавить «Перфоратор BOSCH BFG 6000» в корзину">
+              <svg class="product-card__button-icon" width="15" height="15">
+                <use class="product-card__icon-cart" href="img/sprite.svg#icon-cart"></use>
+              </svg>
               Купить
             </button>
             <button type="button" class="product-card__button product-card__button--bookmark "
@@ -273,6 +279,9 @@
           <div class="product-card__action-buttons">
             <button type="button" class="product-card__button product-card__button--buy modal-trigger"
               data-modal-id="modalAddedToCart" aria-label="Добавить «Перфоратор BOSCH BFG 6000» в корзину">
+              <svg class="product-card__button-icon" width="15" height="15">
+                <use class="product-card__icon-cart" href="img/sprite.svg#icon-cart"></use>
+              </svg>
               Купить
             </button>
             <button type="button" class="product-card__button product-card__button--bookmark "
@@ -291,6 +300,9 @@
           <div class="product-card__action-buttons">
             <button type="button" class="product-card__button product-card__button--buy modal-trigger"
               data-modal-id="modalAddedToCart" aria-label="Добавить «Перфоратор BOSCH BFG 3000» в корзину">
+              <svg class="product-card__button-icon" width="15" height="15">
+                <use class="product-card__icon-cart" href="img/sprite.svg#icon-cart"></use>
+              </svg>
               Купить
             </button>
             <button type="button" class="product-card__button product-card__button--bookmark "
@@ -311,6 +323,9 @@
           <div class="product-card__action-buttons">
             <button type="button" class="product-card__button product-card__button--buy modal-trigger"
               data-modal-id="modalAddedToCart" aria-label="Добавить «Перфоратор BOSCH BFG 6000» в корзину">
+              <svg class="product-card__button-icon" width="15" height="15">
+                <use class="product-card__icon-cart" href="img/sprite.svg#icon-cart"></use>
+              </svg>
               Купить
             </button>
             <button type="button" class="product-card__button product-card__button--bookmark "
@@ -328,6 +343,9 @@
           <div class="product-card__action-buttons">
             <button type="button" class="product-card__button product-card__button--buy modal-trigger"
               data-modal-id="modalAddedToCart" aria-label="Добавить «Перфоратор BOSCH BFG 2000» в корзину">
+              <svg class="product-card__button-icon" width="15" height="15">
+                <use class="product-card__icon-cart" href="img/sprite.svg#icon-cart"></use>
+              </svg>
               Купить
             </button>
             <button type="button" class="product-card__button product-card__button--bookmark "
@@ -347,6 +365,9 @@
           <div class="product-card__action-buttons">
             <button type="button" class="product-card__button product-card__button--buy modal-trigger"
               data-modal-id="modalAddedToCart" aria-label="Добавить «Перфоратор BOSCH BFG 3000» в корзину">
+              <svg class="product-card__button-icon" width="15" height="15">
+                <use class="product-card__icon-cart" href="img/sprite.svg#icon-cart"></use>
+              </svg>
               Купить
             </button>
             <button type="button" class="product-card__button product-card__button--bookmark "
@@ -366,6 +387,9 @@
           <div class="product-card__action-buttons">
             <button type="button" class="product-card__button product-card__button--buy modal-trigger"
               data-modal-id="modalAddedToCart" aria-label="Добавить «Перфоратор BOSCH BFG 6000» в корзину">
+              <svg class="product-card__button-icon" width="15" height="15">
+                <use class="product-card__icon-cart" href="img/sprite.svg#icon-cart"></use>
+              </svg>
               Купить
             </button>
             <button type="button" class="product-card__button product-card__button--bookmark "
@@ -383,6 +407,9 @@
           <div class="product-card__action-buttons">
             <button type="button" class="product-card__button product-card__button--buy modal-trigger"
               data-modal-id="modalAddedToCart" aria-label="Добавить «Перфоратор BOSCH BFG 2000» в корзину">
+              <svg class="product-card__button-icon" width="15" height="15">
+                <use class="product-card__icon-cart" href="img/sprite.svg#icon-cart"></use>
+              </svg>
               Купить
             </button>
             <button type="button" class="product-card__button product-card__button--bookmark "
@@ -498,12 +525,22 @@
     </div>
   </footer>
   <div class="modal" id="modalAddedToCart" tabindex="0">
-    <span>Товар добавлен в корзину!</span>
-    <div class="modal--cart-controls">
-      <a href="#" class="button">Оформить заказ</a>
-      <button class="button button--white">Продолжить покупки</button>
+    <div class="modal__cart-wrapper">
+      <span class="modal__cart-title">
+        <svg class="modal__icon-title" width="66" height="66">
+          <use class="modal__icon-mark" href="img/sprite.svg#icon-mark"></use>
+        </svg>
+        Товар добавлен в корзину!</span>
+      <div class="modal__cart-controls">
+        <a class="button" href="order.html">Оформить заказ</a>
+        <button class="button button--white modal__close-trigger">Продолжить покупки</button>
+      </div>
     </div>
-    <button id="modalCartCloseButton" class="modal-close" type="button" aria-label="Закрыть"></button>
+    <button class="modal__close modal__close-trigger" id="modalCartCloseButton" type="button" aria-label="Закрыть">
+      <svg class="modal__icon" width="21" height="21">
+        <use class="modal__icon-close" href="img/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
   </div>
   <script src="js/script.min.js"></script>
 </body>

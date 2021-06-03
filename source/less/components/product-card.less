@@ -85,26 +85,16 @@
 }
 
 .product-card__button--buy {
-  position: relative;
+  display: flex;
+  align-items: flex-start;
   color: @white;
   background-color: @basic-green;
   box-shadow: inset 0 -3px 0 @buy-button;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 23px;
+  padding-left: 30px;
   margin-bottom: 10px;
   cursor: pointer;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: 10px;
-    left: 30px;
-    background-image: url("../img/icon-cart.svg");
-    opacity: 0.3;
-  }
 
   &:hover {
     background-color: @success;
@@ -113,6 +103,11 @@
   &:active {
     background-color: @special-green;
   }
+}
+
+.product-card__button-icon {
+  margin-right: 8px;
+  opacity: 0.3;
 }
 
 .product-card__button--bookmark {
