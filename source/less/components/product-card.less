@@ -4,7 +4,7 @@
   align-items: center;
   position: relative;
   box-sizing: border-box;
-  border: 1px solid @light-grey;
+  border: 1px solid @color-gallery;
   padding-bottom: 20px;
   text-align: center;
   min-height: 318px;
@@ -30,15 +30,15 @@
   display: block;
   font-size: 1.063em;
   line-height: 1.125rem;
-  color: @special-grey;
+  color: @color-silver-chalice;
 }
 
 .product-card__price {
   display: block;
   font-size: 1.063em;
   line-height: 1.125rem;
-  color: @white;
-  background-color: @basic-red;
+  color: @color-white;
+  background-color: @color-amaranth;
   border-radius: 3px;
   padding: 10px 45px 10px 32px;
   align-self: flex-start;
@@ -63,7 +63,7 @@
 }
 
 .product-card:hover {
-  box-shadow: 0 4px 20px @default-box-shadow;
+  box-shadow: 0 4px 20px @color-fifteen-black;
 
   .product-card__action-buttons {
     opacity: 1;
@@ -87,9 +87,9 @@
 .product-card__button--buy {
   display: flex;
   align-items: flex-start;
-  color: @white;
-  background-color: @basic-green;
-  box-shadow: inset 0 -3px 0 @buy-button;
+  color: @color-white;
+  background-color: @color-apple;
+  box-shadow: inset 0 -3px 0 @color-bilbao;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 30px;
@@ -97,11 +97,11 @@
   cursor: pointer;
 
   &:hover {
-    background-color: @success;
+    background-color: @color-lima;
   }
 
   &:active {
-    background-color: @special-green;
+    background-color: @color-green-leaf;
   }
 }
 
@@ -111,19 +111,19 @@
 }
 
 .product-card__button--bookmark {
-  color: @basic-blue;
-  background-color: @white;
-  box-shadow: inset 0 0 0 3px @basic-green;
+  color: @color-pickled-bluewood;
+  background-color: @color-white;
+  box-shadow: inset 0 0 0 3px @color-apple;
   padding-top: 11px;
   padding-bottom: 9px;
   cursor: pointer;
 
   &:hover {
-    box-shadow: inset 0 0 0 3px @basic-blue;
+    box-shadow: inset 0 0 0 3px @color-pickled-bluewood;
   }
 
   &:active {
-    box-shadow: inset 0 0 0 3px @basic-blue;
+    box-shadow: inset 0 0 0 3px @color-pickled-bluewood;
     opacity: 0.5;
   }
 }
